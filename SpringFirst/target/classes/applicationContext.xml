@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation=
+               "http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+   <!--< bean id="developer" class="org.teju.Developer" scope="prototype> -->
+
+    <bean id="developer" class="org.teju.Developer" autowire="byType">
+        <property name="age" value="23"></property>
+        <!--<property name="com" ref="com"/>-->
+       <!-- <constructor-arg value="24"/>-->
+        <!--		<constructor-arg value="21"></constructor-arg>
+		<constructor-arg ref="lap1"></constructor-arg> -->
+
+        <!--		<constructor-arg type="com.teju.Laptop" ref="lap1"/>
+                <constructor-arg type="int" value="21"/> -->
+
+        <!--		<constructor-arg index="1" ref="lap1"/>
+                <constructor-arg index="0" value="21"/> -->
+
+        <!--<constructor-arg name="lap" ref="lap1"/>
+        <constructor-arg name="age" value="21"/>-->
+
+
+    </bean>
+    <bean id="com" class="org.teju.Laptop" primary="true">
+     </bean>
+    <bean id="com1" class="org.teju.Desktop">
+    </bean>
+</beans>
